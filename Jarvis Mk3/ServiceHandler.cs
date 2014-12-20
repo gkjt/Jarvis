@@ -23,11 +23,19 @@ namespace Jarvis_Mk3
 
         public void registerService(JService service){
             service.setId(idCounter++);
+            ServiceList.Add(service.getId(), service);
         }
 
         public void setStarted(JService service)
         {
 
+
+        }
+
+        public void forceStopService(JService service)
+        {
+            Thread threadToEnd;
+            ThreadList.TryGetValue(service.getId(), out threadToEnd);
 
         }
     }

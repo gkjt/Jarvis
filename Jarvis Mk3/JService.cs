@@ -15,6 +15,12 @@ namespace Jarvis_Mk3.Util.Service
             set;
         }
 
+        bool started
+        {
+            get;
+            set;
+        }
+
         ServiceHandler handler;
         String name;
 
