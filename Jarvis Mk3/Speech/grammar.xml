@@ -1,0 +1,48 @@
+﻿<grammar version="1.0" xml:lang="en-GB" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  
+
+
+  <rule id="rootRule">
+    <item repeat="0-1">hello</item>
+    <item> jarvis </item>
+    <item repeat="0-1">
+      <ruleref uri="#verbs"></ruleref> 
+    </item>
+    <item repeat="0-1">
+    <one-of>
+      <item><ruleref uri="#stopRule"></ruleref></item>
+      <item>
+        <ruleref uri="#functions"></ruleref>
+       <tag>out.function = rules.functions</tag>
+      </item>
+      
+    </one-of>
+      </item>
+  
+  </rule>
+  
+    
+  <rule id="stopRule">
+    <one-of>
+      <item> stop </item>
+      <item> exit </item>
+      <item> close </item>
+    </one-of>
+  </rule>
+  
+  <rule id="functions">
+    <one-of>
+      <item> homework </item>
+      <item> events </item>
+      <item> mail </item>
+    </one-of>
+  </rule>
+
+  <rule id="verbs">
+    <item> check </item>
+    <item> open </item>
+    <item> start </item>
+  </rule>
+
+
+</grammar>

@@ -1,0 +1,10 @@
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\bin\Debug\Jarvis Mk3.exe.config
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\obj\Debug\Jarvis Mk3.csprojResolveAssemblyReference.cache
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\bin\Debug\Jarvis Mk3.exe
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\bin\Debug\Jarvis Mk3.pdb
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\obj\Debug\Jarvis Mk3.exe
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\obj\Debug\Jarvis Mk3.pdb
+c:\users\george\documents\visual studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\bin\Debug\Speech\grammar.xml
+C:\Users\George\Documents\Visual Studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\obj\Debug\Jarvis_Mk3.MainGui.resources
+C:\Users\George\Documents\Visual Studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\obj\Debug\Jarvis_Mk3.Properties.Resources.resources
+C:\Users\George\Documents\Visual Studio 2012\Projects\Jarvis Mk3\Jarvis Mk3\obj\Debug\Jarvis Mk3.csproj.GenerateResource.Cache
