@@ -24,5 +24,11 @@ namespace Jarvis_Mk3
         public void registerService(JService service){
             service.setId(idCounter++);
         }
+
+        public void setStarted(JService service)
+        {
+
+
+        }
     }
 }

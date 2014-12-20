@@ -9,7 +9,7 @@ namespace Jarvis_Mk3
 {
     abstract class JTimedService : JService
     {
-        JTimedService(DateTime time)
+        JTimedService(String name, ServiceHandler handler, DateTime time) : base(name, handler)
         {
 
         }

@@ -8,16 +8,11 @@ namespace Jarvis_Mk3.Util.Service
 {
     abstract class JBasicService : JService
     {
-        public JBasicService(String name, ServiceHandler handler)
+        public JBasicService(String name, ServiceHandler handler) : base(name, handler)
         {
 
         }
 
-        public override void start()
-        {
-            handler.setStarted(this);
-            onStart();
-        }
 
     }
 }

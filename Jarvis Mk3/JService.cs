@@ -14,6 +14,7 @@ namespace Jarvis_Mk3.Util.Service
             get;
             set;
         }
+
         ServiceHandler handler;
         String name;
 
@@ -40,8 +41,8 @@ namespace Jarvis_Mk3.Util.Service
 
         public void start()
         {
-
-
+            handler.setStarted(this);
+            onStart();
         }
 
         public void stop()
