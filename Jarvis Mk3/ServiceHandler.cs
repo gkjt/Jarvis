@@ -22,21 +22,35 @@ namespace Jarvis_Mk3
         }
 
         public void registerService(JService service){
-            service.setId(idCounter++);
+            lock (this)
+            {
+                service.setId(idCounter++);
+            }
             ServiceList.Add(service.getId(), service);
         }
 
-        public void setStarted(JService service)
-        {
-
-
-        }
 
         public void forceStopService(JService service)
         {
             Thread threadToEnd;
-            ThreadList.TryGetValue(service.getId(), out threadToEnd);
-
+            try
+            {
+                ThreadList.TryGetValue(service.getId(), out threadToEnd);
+                threadToEnd.Abort();
+                removeService(service);
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine("Force Stop Failed: " + e.ToString());
+            }
         }
+
+        public void removeService(JService service)
+        {
+            ThreadList.Remove(service.getId());
+            ServiceList.Remove(service.getId());
+        }
+
+
     }
 }

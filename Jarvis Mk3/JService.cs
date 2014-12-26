@@ -15,46 +15,39 @@ namespace Jarvis_Mk3.Util.Service
             set;
         }
 
-        bool started
+        bool running
         {
             get;
             set;
         }
 
         ServiceHandler handler;
-        String name;
 
         public abstract void onStart();
         public abstract void onStop();
         public abstract void pause();
         public abstract void onPause();
+        public abstract void run();
 
-        public JService(String name, ServiceHandler handler)
+        public JService(ServiceHandler handler)
         {
-            this.name = name;
             this.handler = handler;
-        }
-
-        public void setId(long id)
-        {
-            this.id = id;
-        }
-        
-        public long getId()
-        {
-            return id;
         }
 
         public void start()
         {
-            handler.setStarted(this);
+            running = true;
             onStart();
+            run();
+            onStop();
+            running = false;
         }
 
         public void stop()
         {
-
+            onStop();
+            running = false;
+            handler.removeService(this);
         }
-
     }
 }

@@ -45,9 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HomeworkTrackerService.cs" />
-    <Compile Include="JBasicService.cs" />
     <Compile Include="JService.cs" />
-    <Compile Include="JTimedService.cs" />
     <Compile Include="MainGui.cs">
       <SubType>Form</SubType>
     </Compile>
