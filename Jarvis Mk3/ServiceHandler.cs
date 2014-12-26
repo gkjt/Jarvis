@@ -24,9 +24,9 @@ namespace Jarvis_Mk3
         public void registerService(JService service){
             lock (this)
             {
-                service.setId(idCounter++);
+                service.Id = idCounter++;
             }
-            ServiceList.Add(service.getId(), service);
+            ServiceList.Add(service.Id, service);
         }
 
 
@@ -35,7 +35,7 @@ namespace Jarvis_Mk3
             Thread threadToEnd;
             try
             {
-                ThreadList.TryGetValue(service.getId(), out threadToEnd);
+                ThreadList.TryGetValue(service.Id, out threadToEnd);
                 threadToEnd.Abort();
                 removeService(service);
             }
@@ -47,8 +47,8 @@ namespace Jarvis_Mk3
 
         public void removeService(JService service)
         {
-            ThreadList.Remove(service.getId());
-            ServiceList.Remove(service.getId());
+            ThreadList.Remove(service.Id);
+            ServiceList.Remove(service.Id);
         }
 
 

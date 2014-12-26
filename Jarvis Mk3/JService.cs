@@ -9,16 +9,17 @@ namespace Jarvis_Mk3.Util.Service
 {
     public abstract class JService
     {
-        long id
+        private long _id;
+        public long Id
         {
-            get;
-            set;
+            get { return _id; }
+            set { this._id = Id; }
         }
-
-        bool running
+        private bool _running;
+        public bool Running
         {
-            get;
-            set;
+            get { return _running; }
+            private set { this._running = Running; }
         }
 
         ServiceHandler handler;
@@ -34,17 +35,17 @@ namespace Jarvis_Mk3.Util.Service
 
         public void start()
         {
-            running = true;
+            _running = true;
             onStart();
             run();
             onStop();
-            running = false;
+            _running = false;
         }
 
         public void stop()
         {
             onStop();
-            running = false;
+            _running = false;
             handler.removeService(this);
         }
     }
