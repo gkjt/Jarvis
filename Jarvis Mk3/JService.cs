@@ -25,8 +25,6 @@ namespace Jarvis_Mk3.Util.Service
 
         public abstract void onStart();
         public abstract void onStop();
-        public abstract void pause();
-        public abstract void onPause();
         public abstract void run();
 
         public JService(ServiceHandler handler)
