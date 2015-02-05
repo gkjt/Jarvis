@@ -14,7 +14,7 @@ C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\obj\Debug\Jarvis Mk3.csprojRe
 C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\obj\Debug\Jarvis_Mk3.MainGui.resources
 C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\obj\Debug\Jarvis_Mk3.Properties.Resources.resources
 C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\obj\Debug\Jarvis Mk3.csproj.GenerateResource.Cache
-C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\bin\Debug\Speech\grammar.xml
 C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\bin\Debug\Jarvis Mk3.exe
 C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\bin\Debug\Jarvis Mk3.pdb
 C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\obj\Debug\Jarvis Mk3.pdb
+C:\Users\George\Documents\GitHub\Jarvis\Jarvis Mk3\bin\Debug\src\Speech\grammar.xml

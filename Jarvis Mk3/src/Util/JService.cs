@@ -15,6 +15,7 @@ namespace Jarvis_Mk3.Util.Service
             get { return _id; }
             set { this._id = Id; }
         }
+
         private bool _running;
         public bool Running
         {

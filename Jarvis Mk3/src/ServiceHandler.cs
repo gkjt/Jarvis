@@ -29,7 +29,7 @@ namespace Jarvis_Mk3
             ServiceList.Add(service.Id, service);
         }
 
-
+        //Aborts thread without giving it chance to finish
         public void forceStopService(JService service)
         {
             Thread threadToEnd;
@@ -41,7 +41,7 @@ namespace Jarvis_Mk3
             }
             catch (ArgumentNullException e)
             {
-                Console.WriteLine("Force Stop Failed: " + e.ToString());
+                Console.WriteLine("Force Stop " + service.Id + " Failed: " + e.ToString());
             }
         }
 
@@ -49,6 +49,27 @@ namespace Jarvis_Mk3
         {
             ThreadList.Remove(service.Id);
             ServiceList.Remove(service.Id);
+        }
+
+        public bool startService(JService service)
+        {
+            JService serviceToStart;
+            Thread threadStarted;
+            
+            try
+            {
+                ServiceList.TryGetValue(service.Id, out serviceToStart);
+                threadStarted = new Thread(service.start);
+                ThreadList.Add(service.Id, threadStarted);
+                threadStarted.Start();
+                return true;
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine("Start Service " + service.Id +" Failed: " + e.ToString());
+            }
+
+            return false;
         }
 
 

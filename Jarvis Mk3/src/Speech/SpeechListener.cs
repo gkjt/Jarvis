@@ -10,7 +10,6 @@ namespace Jarvis_Mk3.Speech
     public abstract class SpeechListener
     {
         public abstract bool speechRecognised(SpeechRecognizedEventArgs recognisedSpeech);
-        
 
     }
 }
